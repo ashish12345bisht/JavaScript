@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+        .hamburger{
+            border: none;
+            background-color: transparent;
+            font-size: 2em;
+            display: none;
+        }
+        header h1{
+            flex: 0.2;
+            color: #534c4c;
+        }
+        header li{
+            list-style-type:none;
+        }
+        .links{
+            flex: 0.3;
+            color: #333;
+            position: relative;
+            font-size: 1.25em;
+            font-weight: 900;
+            display: flex;
+            justify-content: space-between;
+        }
+        .search-bar{
+            flex: 0.2;
+            display: flex;
+            text-align: right;
+            padding: 0.5em 1em;
+            color: #a59494;
+            border-radius: 30px;
+            font-size: 1em;
+            background-color: #e9dfdf;
+        }
+        .search-bar > input{
+            border: none;
+            outline: none;
+            background-color: #e9dfdf;
+        }
+        .section-1{
+            width: 50vw;
+            text-align: center;
+            margin: 50px auto;
+        }
+        .section-1 > h1{
+            font-size: 5em;
+            line-height: 1em;
+            font-weight: 900;
+        }
+        .section-1 > h4{
+            font-size: 2em;
+            font-weight: 100;
+            padding: 0 130px;
+            color: #9B9B9B;
+        }
+        .section-1 > a{
+            background-color: #004687;
+            color: #fff;
+            padding: 0.5em;
+            border-radius: 20px;
+            font-size: 2em;
+        }
+        .section-2{
+            width: 80vw;
+            height: 500px;
+            margin: 100px auto;
+            display: flex;
+        }
+        .blank{
+            width: 60vw;
+            background: url("https://images.unsplash.com/photo-1531053270060-6643c8e70e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVhZGluZyUyMGdsYXNzZXN8ZW58MHx8MHx8&w=1000&q=80");
+            background-size: cover;
+            border-radius: 30px;
+        }
+        .air{
+            position: absolute;
+            z-index: 2;
+            background-color: white;
+            height: 260px;
+            padding: 40px;
+            border-radius: 50px;
+            width: 35vw;
+            left: 50%;
+            top: 105%;
+            box-shadow: 0px 0px 20px #333;
+        }
+        .air >h3{
+            color: #004687;
+            font-size: 1.5em;
+        }
+        .air > h2{
+            font-size: 3em;
+            margin: 0;
+        }
+        .air > p{
+            color: #9B9B9B;
+            font-size: 1em;
+        }
+        .icons{
+            position: relative;
+            top: 85%;
+            left: 50px;
+        }
+        .fab{
+            padding-right: 20px;
+            font-size: 2em;
+            color: #9B9B9B;
+        }
+        .section-3{
+            width: 80vw;
+            margin: 50px auto;
+            background-color: #004687;
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+            color: #fff;
+        }
+        .section-3 > h1{
+            font-size: 3em;
+        }
+        .image-container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .image-container > div{
+            width: 20vw;
+        }
+        .image-container img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @media screen and (max-width:900px) {
+            .hamburger{
+                display: block;
+            }
+            header{
+                height: 50px;
+            }
+            .links{
+                position: absolute;
+                display: block;
+                transform: translateX(-120%);
+                padding: 20px;
+                background-color: #fff;
+                font-size: 4em;
+                line-height: 1.5em;
+                top: 50px;
+            }
+            .section-1{
+                width: 100vw;
+            }
+            .section-2{
+                flex-direction: column;
+                text-align: center;
+                justify-content: space-between;
+                height: 800px;
+            }
+            .blank{
+                width: 80vw;
+                height: 400px;
+            }
+            .air{
+                width: 55vw;
+                top: 170%;
+                left: 20%;
+            }
+            .image-container > div{
+                width: 40vw;
+            }
+            .air{
+                padding: 10px;
+            }
+            .air >h3{
+                color: #004687;
+                font-size: 1em;
+            }
+            .air > h2{
+                font-size: 2.5em;
+                margin: 0;
+            }
+            .air > p{
+                color: #9B9B9B;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="hamburger"><i class="fas fa-bars"></i></button>
+        <h1>BookPod.</h1>
+        <ul class="links">
+            <li>Home</li>
+            <li>Categories</li>
+            <li>Podcasts</li>
+        </ul>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search" />
+        </div>
+    </header>
+    <section class="section-1">
+            <h1>
+                Home of <span style="color: #004687;">100,000+</span> books and podcasts
+            </h1>
+            <h4>Get the latest books and listen to the latest podcasts all in one place</h4>
+            <a>Get Started</a>
+    </section>
+    <section class="section-2">
+        <div class="blank"></div>
+        <div>
+            <div class="air">
+                <h3>LOREM IPSUM</h3>
+                <h2>Lorem ipsum<br/> dolor sit amet</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, commodi. Consequuntur omnis porro excepturi cupiditate praesentium earum unde eaque nisi.</p>
+            </div>
+            <div class="icons">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <h1>Featured Writers</h1>
+        <div class="image-container">
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/E_R_Braithwaite_hkNl6mqt5u.jpg?updatedAt=1639201980772" alt="E R Braithwaite" />
+                <h2>E R Braithwaite</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/Andrea_Levy_5mYiTn1Wqk.jpg?updatedAt=1639201979263" alt="Andrea Levy" />
+                <h2>Andrea Levy</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/Stephen_King_16AqqH-xE.jpg?updatedAt=1639201981805" alt="Stephen King" />
+                <h2>Stephen King</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/Jorge_Amado_JPCBRZIu8.jpg?updatedAt=1639201981000" alt="Jorge Amado" />
+                <h2>Jorge Amado</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/Gayle_Forman_vYKi8CfyeHCA.jpg?updatedAt=1639201982250" alt="Gayle Forman" />
+                <h2>Gayle Forman</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/Shashi_Tharoor_SP4VOOWF_69.jpg?updatedAt=1639201981145" alt="Shashi Tharoor" />
+                <h2>Shashi Tharoor</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/J._K._Rowling_2-kPDB7LZ.jpg?updatedAt=1639201981994" alt="J. K. Rowling" />
+                <h2>J. K. Rowling</h2>
+            </div>
+            <div class="div-writers">
+                <img src="https://ik.imagekit.io/cooldunlin185005/temp-images/John_Green_0OXHX26uVhl.jpg?updatedAt=1639201981580" alt="John Green" />
+                <h2>John Green</h2>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const links = document.querySelector(".links")
+        var x=true;
+        const toggle = () => {
+            if (x) {
+                links.style.transform = "translateX(0%)"
+                links.style.transition="all 0.2s linear"
+                x = false;
+                console.log("true")
+            }
+            //console.log("hello");
+            else {
+                links.style.transform = "translateX(-120%)"
+                x = true
+                console.log("false")
+            }
+        }
+        hamburger.addEventListener("click",()=>toggle())
+    </script>
+</body>
+</html>
